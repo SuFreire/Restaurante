@@ -20,7 +20,6 @@ namespace Restaurante.Models
         public string Email { get; set; }
         [Required(ErrorMessage = "O campo 'telefone' é obrigatório")]
         [Column("int(9)")]
-        [Range(200000000,999999999, ErrorMessage= "O campo 'telefone' não aceita além de 9 digitos..")]
         public int Telefone { get; set; }
     }
 }

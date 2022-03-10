@@ -18,14 +18,14 @@ namespace Restaurante.Controllers
             _context = context;
         }
 
-        // GET: Reservas
+        // GET: Reservas1
         public async Task<IActionResult> Index()
         {
             var restauranteContext = _context.Reserva.Include(r => r.Registo);
             return View(await restauranteContext.ToListAsync());
         }
 
-        // GET: Reservas/Details/5
+        // GET: Reservas1/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -44,19 +44,19 @@ namespace Restaurante.Controllers
             return View(reserva);
         }
 
-        // GET: Reservas/Create
+        // GET: Reservas1/Create
         public IActionResult Create()
         {
             ViewData["RegistoID"] = new SelectList(_context.Registo, "RegistoID", "Email");
             return View();
         }
 
-        // POST: Reservas/Create
+        // POST: Reservas1/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ReservaID,Nome,Telefone,NºdePessoas,RegistoID")] Reserva reserva)
+        public async Task<IActionResult> Create([Bind("ReservaID,Nome,Telefone,DataReserva,HoraReserva,NºdePessoas,RegistoID")] Reserva reserva)
         {
             if (ModelState.IsValid)
             {
@@ -68,7 +68,7 @@ namespace Restaurante.Controllers
             return View(reserva);
         }
 
-        // GET: Reservas/Edit/5
+        // GET: Reservas1/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -85,12 +85,12 @@ namespace Restaurante.Controllers
             return View(reserva);
         }
 
-        // POST: Reservas/Edit/5
+        // POST: Reservas1/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ReservaID,Nome,Telefone,NºdePessoas,RegistoID")] Reserva reserva)
+        public async Task<IActionResult> Edit(int id, [Bind("ReservaID,Nome,Telefone,DataReserva,HoraReserva,NºdePessoas,RegistoID")] Reserva reserva)
         {
             if (id != reserva.ReservaID)
             {
@@ -121,7 +121,7 @@ namespace Restaurante.Controllers
             return View(reserva);
         }
 
-        // GET: Reservas/Delete/5
+        // GET: Reservas1/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -140,7 +140,7 @@ namespace Restaurante.Controllers
             return View(reserva);
         }
 
-        // POST: Reservas/Delete/5
+        // POST: Reservas1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

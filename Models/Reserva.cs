@@ -21,10 +21,19 @@ namespace Restaurante.Models
         [Required(ErrorMessage = "O campo 'telefone' é obrigatório")]
         [Column("int(9)")]
         public int Telefone { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayName("Dia da Reserva")]
+        [Required(ErrorMessage = "O campo 'Dia da Reserva' é obrigatório")]
+        public DateTime DataReserva { get; set; }
+        [DataType(DataType.Time)]
+        [DisplayName("Hora da Reserva")]
+        [Required(ErrorMessage = "O campo 'Hora da Reserva' é obrigatório")]
+        public DateTime HoraReserva { get; set; }
         [Required(ErrorMessage = "O campo 'Nº de pessoas' é obrigatório")]
         [Column("int(2)")]
+        [DisplayName("Nº de Pessoas")]
         public int NºdePessoas { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Email inexistente, por favor faça o seu registo")]
         [ForeignKey("Registo")]
         [DisplayName("Email")]
         public int RegistoID { get; set; }

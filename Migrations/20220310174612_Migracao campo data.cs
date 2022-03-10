@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Restaurante.Migrations
 {
-    public partial class AdicionarclasseReserva : Migration
+    public partial class Migracaocampodata : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,6 +30,8 @@ namespace Restaurante.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     varchar50 = table.Column<string>(name: "varchar(50)", type: "nvarchar(max)", nullable: false),
                     int9 = table.Column<int>(name: "int(9)", type: "int", nullable: false),
+                    DataReserva = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    HoraReserva = table.Column<DateTime>(type: "datetime2", nullable: false),
                     int2 = table.Column<int>(name: "int(2)", type: "int", nullable: false),
                     RegistoID = table.Column<int>(type: "int", nullable: false)
                 },
