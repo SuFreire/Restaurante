@@ -1,0 +1,42 @@
+﻿@model Restaurante.Models.Reserva
+
+@{
+    ViewData["Title"] = "Reservas";
+}
+
+<h1>Detalhes da sua reserva</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NºdePessoas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NºdePessoas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Registo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Registo.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ReservaID">Edit</a> |
+    <a asp-action="Index">Voltar à lista</a>
+</div>
