@@ -8,16 +8,16 @@ namespace Restaurante.Controllers
 {
     public class Backoffice : Controller
     {
-        public string Index()
+
+        public IActionResult Password()
         {
-            string t = "O x e do Index";
-                return t;
+            return View();
         }
 
-        public string Ola()
+        public IActionResult Index()
         {
-            string hello = "Hello World!";
-            return hello;
+            return View();
         }
+
     }
 }
