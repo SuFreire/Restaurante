@@ -9,12 +9,12 @@ namespace Restaurante.Controllers
     public class Backoffice : Controller
     {
 
-        public IActionResult Password()
+        public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Index()
+        public IActionResult Controlo()
         {
             return View();
         }

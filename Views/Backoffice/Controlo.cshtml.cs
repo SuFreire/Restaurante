@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Restaurante.Views.Backoffice
 {
-    public class PasswordModel : PageModel
+    public class ControleModel : PageModel
     {
         public void OnGet()
         {

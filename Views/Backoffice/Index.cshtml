@@ -1,14 +1,28 @@
-﻿@{
-    ViewData["Title"] = "Backoffice";
-}
-<h1 class="display-6">Controle de reservas e registo dos clientes</h1>
-<p>
+﻿
 
-</p>
-<div class="text-left">
-    <p><a href="https://localhost:44349/Reservas">Reservas</a></p>
+<div>
+    <label for="username">Nome de ultilizador:</label>
+    <input type="text"
+           id="username" name="username" />
 </div>
-<div class="text-left">
-    <p><a href="https://localhost:44349/Registo">Registos</a></p>
+
+<div>
+    <label for="pass">Senha (Minimo 8 caracteres):</label>
+    <input type="password"
+           id="pass" name="password" minlenght="8"
+           required />
 </div>
+
+<input type="submit" value="Entrar" />
+
+
+
+
+
+
+
+
+
+
+
 
