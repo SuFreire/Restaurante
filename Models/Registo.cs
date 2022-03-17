@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Restaurante.Models
 {
+    [Index(nameof(Email), IsUnique = true)]
     public class Registo
     {
         [Key]
