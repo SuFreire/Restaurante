@@ -50,10 +50,11 @@
 <div>
     <a asp-area="" asp-controller="Registo" asp-action="Create">Não tenho conta, quero registar-me.</a>
 </div>
+
 <div>
-    <a asp-action="Index">Voltar à lista</a>
+    <a asp-action="Index">Página anterior.</a>
 </div>
 
-    @section Scripts {
-        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    }
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

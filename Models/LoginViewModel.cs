@@ -19,7 +19,7 @@ namespace Restaurante.Models
 
         [Required(ErrorMessage = "Informe a senha")]
         [DataType(DataType.Password)]
-        [RegularExpression(@"^[estarola]*$")]
+        [RegularExpression(@"^[estarola]*$", ErrorMessage = "Senha inválida, digite novamente!")]
         public string Senha { get => senha; set => senha = value; }
 
         [Display(Name = "Lembrar Me")]
