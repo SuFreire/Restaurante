@@ -5,7 +5,9 @@
 }
 
 <h1>Faça a sua reserva</h1>
-
+<div>
+    <a asp-area="" asp-controller="Registo" asp-action="Create">Não tenho conta, quero registar-me.</a>
+</div>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -48,11 +50,7 @@
 </div>
 
 <div>
-    <a asp-area="" asp-controller="Registo" asp-action="Create">Não tenho conta, quero registar-me.</a>
-</div>
-
-<div>
-    <a asp-action="Index">Página anterior.</a>
+    <a asp-action="Index"><img src="~/Voltar_atras.png" width="40" /></a>
 </div>
 
 @section Scripts {

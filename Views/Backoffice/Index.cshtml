@@ -4,9 +4,11 @@
     ViewData["Title"] = "Login";
 }
 
-<h1>Entrar no sistema</h1>
-
-
+<div class="text-left">
+    <h1>Entrar no sistema</h1>
+<div class="text-right">
+    <a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Saida.png" width="40" />Sair</a>
+</div>
 <hr />
 <div class="text-left">
     <div class="col-md-4">
@@ -33,12 +35,9 @@
         </form>
     </div>
 </div>
-
-<div class="text-justify">
-    <a asp-area="" asp-controller="Home" asp-action="Index">Sair</a>
 </div>
-       
-               
+
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
