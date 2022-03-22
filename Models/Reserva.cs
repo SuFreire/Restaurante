@@ -35,7 +35,7 @@ namespace Restaurante.Models
         public int NºdePessoas { get; set; }
         [Required(ErrorMessage = "Email inexistente, por favor faça o seu registo")]
         [ForeignKey("Registo")]
-        [DisplayName("Email")]
+        [DisplayName("Email (Se o seu nome não se encontrar na lista abaixo, faça o seu registo antes de avançar.)")]
         public int RegistoID { get; set; }
         public Registo Registo { get; set; }
 

@@ -1,27 +1,47 @@
-﻿
+﻿@model Restaurante.Models.LoginViewModel
 
-<div>
-    <label for="username">Nome de ultilizador:</label>
-    <input type="text"
-           id="username" name="username" />
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Entrar no sistema</h1>
+
+
+<hr />
+<div class="text-left">
+    <div class="col-md-4">
+        <form asp-action="Controlo">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Usuario" class="control-label"></label>
+                <input asp-for="Usuario" class="form-control" />
+                <span asp-validation-for="Usuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Senha" class="control-label"></label>
+                <input asp-for="Senha" class="form-control" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LembrarMe" class="control-label"></label>
+                <input asp-for="LembrarMe" class="form-control" />
+                <span asp-validation-for="LembrarMe" class="text-danger"></span>
+            </div>
+            <div class="conteiner">
+                <input type="submit" value="Entrar" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
 </div>
 
 <div>
-    <label for="pass">Senha (Minimo 8 caracteres):</label>
-    <input type="password"
-           id="pass" name="password" minlenght="8"
-           required />
+    <a asp-area="" asp-controller="Home" asp-action="Index"  >Sair</a>
 </div>
+                       
 
-<input type="submit" value="Entrar" />
-
-
-
-
-
-
-
-
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
 
 
 
