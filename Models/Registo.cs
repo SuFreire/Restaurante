@@ -17,6 +17,7 @@ namespace Restaurante.Models
         [Column (TypeName = "varchar(50)")]
         public string Nome { get; set; }
         [Required(ErrorMessage = "O campo 'email' é obrigatório")]
+        [EmailAddress(ErrorMessage = "Este email já se encontra registado!")]
         [Column(TypeName = "varchar(30)")]
         public string Email { get; set; }
         [Required(ErrorMessage = "O campo 'telefone' é obrigatório")]

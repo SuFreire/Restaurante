@@ -2,12 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Imagens\**" />
     <Compile Remove="Views\NovaPasta\**" />
+    <Content Remove="Imagens\**" />
     <Content Remove="Views\NovaPasta\**" />
+    <EmbeddedResource Remove="Imagens\**" />
     <EmbeddedResource Remove="Views\NovaPasta\**" />
+    <None Remove="Imagens\**" />
     <None Remove="Views\NovaPasta\**" />
   </ItemGroup>
 
@@ -33,7 +38,6 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="Imagens\" />
   </ItemGroup>
 
 </Project>
